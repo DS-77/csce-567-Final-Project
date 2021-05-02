@@ -3,8 +3,15 @@
     <!-- Navigation Bar -->
     <v-app-bar app color="#E10600" dark class="top_bar">
 
+      <v-img
+      class="mx-2"
+      :src="require('./assets/black_f1_logo.png')"
+      max-width="100"
+      contain
+    ></v-img>
+
       <div class="d-flex align-center">
-        <h1>Formula 1</h1>
+        <h1>Data Visualization</h1>
       </div>
 
       <v-spacer></v-spacer>
@@ -13,8 +20,10 @@
     <!-- Main App Components -->
     <v-main>
       <div class="backdrop">
-        <HelloWorld/>
-        <Dashboard/>
+        <div class="blur">
+          <HelloWorld/>
+          <Dashboard/>
+        </div>
       </div>
     </v-main>
 
@@ -56,4 +65,8 @@ export default {
     background-size: cover
     background-origin: content-box
     background-attachment: fixed
+  
+  .blur
+    backdrop-filter: blur(8px)
+    background: rgba(255, 255, 255, 0.2)
 </style>

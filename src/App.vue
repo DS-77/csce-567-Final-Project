@@ -10,19 +10,23 @@
       contain
     ></v-img>
 
-      <div class="d-flex align-center">
+      <v-toolbar-title class="d-flex align-center">
         <h1>Data Visualization</h1>
-      </div>
+      </v-toolbar-title>
 
       <v-spacer></v-spacer>
+
+      <router-link tag="a" to="/">Home</router-link>
+
     </v-app-bar>
 
     <!-- Main App Components -->
     <v-main>
       <div class="backdrop">
         <div class="blur">
-          <HelloWorld/>
-          <Dashboard/>
+          <transition>
+            <router-view />
+          </transition>
         </div>
       </div>
     </v-main>
@@ -42,16 +46,8 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-import Dashboard from './components/Dashboard';
-
 export default {
   name: 'App',
-
-  components: {
-    HelloWorld,
-    Dashboard
-  },
 
   data: () => ({
     //

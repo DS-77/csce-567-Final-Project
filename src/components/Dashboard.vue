@@ -3,6 +3,11 @@
     <v-container fluid class="dash">
         <h2>Charts go here.</h2>
     </v-container>
+
+    <!-- TODO: Make a Grid -->
+    <!-- TODO: Bubble Chart will be the biggest -->
+    <!-- TODO: Bar chart and treemap will be of equal size beneith the bubble chart -->
+    <!-- TODO: Parse data -->
     
 </template>
 

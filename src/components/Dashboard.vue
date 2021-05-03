@@ -1,8 +1,8 @@
 <template>
 
-    <div class="dash">
+    <v-container fluid class="dash">
         <h2>Charts go here.</h2>
-    </div>
+    </v-container>
     
 </template>
 

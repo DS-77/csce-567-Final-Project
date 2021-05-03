@@ -16,7 +16,10 @@
 
       <v-spacer></v-spacer>
 
-      <router-link tag="a" to="/">Home</router-link>
+      <div class="nav-items">
+        <router-link tag="a" to="/">Home</router-link>
+        <router-link tag="a" to="/data">Data Table</router-link>
+      </div>
 
     </v-app-bar>
 
@@ -65,4 +68,14 @@ export default {
   .blur
     backdrop-filter: blur(8px)
     background: rgba(255, 255, 255, 0.2)
+
+  .nav-items
+    a
+      color: white !important
+      padding-left: 16px
+      text-decoration: none
+
+    a:hover
+      color: black
+      font-weight: bold
 </style>

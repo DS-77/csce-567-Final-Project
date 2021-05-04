@@ -7,15 +7,14 @@
             :src="require('../assets/f1_logo.png')"
             class="my-3"
             contain
-            height="700"
+            height="480"
           />
         </v-col>
       </v-row>
-
     <!-- TODO: Add a description of project. Maybe Like the Background and why its important -->
   </v-container>
 
-  <Dashboard></Dashboard>
+    <Dashboard></Dashboard>
   </div>
 </template>
 

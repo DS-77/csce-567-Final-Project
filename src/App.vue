@@ -1,11 +1,11 @@
 <template>
   <v-app>
     <!-- Navigation Bar -->
-    <v-app-bar app color="#E10600" dark class="top_bar">
+    <v-app-bar app color="#031E49" dark class="top_bar">
 
       <v-img
       class="mx-2"
-      :src="require('./assets/black_f1_logo.png')"
+      :src="require('./assets/red_f1_logo.png')"
       max-width="100"
       contain
     ></v-img>
@@ -27,7 +27,7 @@
     <v-main>
       <div class="backdrop">
         <div class="blur">
-          <transition>
+          <transition name="fade" mode="out-in">
             <router-view />
           </transition>
         </div>
@@ -51,10 +51,6 @@
 <script>
 export default {
   name: 'App',
-
-  data: () => ({
-    //
-  }),
 };
 </script>
 

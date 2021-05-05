@@ -116,7 +116,7 @@
                 });
 
                 // Creating SVG for graph
-                const svg = d3.select('svg').attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform","translate(" + margin.left + "," + margin.top + ")");
+                const svg = d3.select('#bar').attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
                 // Title
                 svg.append("text").attr("x", width/2).attr("y", 60-margin.top).attr("text-anchor", "middle").text("Global Pitstop Times").style("font-size", "32px").style("fill", "#031E49");
@@ -149,6 +149,8 @@
 <style lang="sass">
     #bar
         background-color: #B8CAD1
+        width: 100%
+        height: 100%
 
     .yAxis, .xAxis
         line

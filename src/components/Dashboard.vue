@@ -1,11 +1,11 @@
 <template>
 
     <v-container fluid class="dash">
-        <h2>Charts go here.</h2>
+        <H1>Formula One: Pitstop Data Visualization</H1>
 
         <v-row>
             <v-col cols="12">
-                <!-- For Global wins. Bubble Chart -->
+                <BubbleChart></BubbleChart>
             </v-col>
         </v-row>
 
@@ -28,8 +28,10 @@
 
 <script>
 import BarGraph from './BarGraph.vue'
+import BubbleChart from './BubbleChart'
+
 export default {
-    components: {BarGraph},
+    components: { BarGraph, BubbleChart },
     name: 'Dashboard'
     
 }
@@ -40,4 +42,7 @@ export default {
         height: fit-content
         background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1))
         padding: 32px
+
+        H1
+            text-align: center
 </style>

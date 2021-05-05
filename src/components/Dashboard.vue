@@ -15,7 +15,7 @@
             </v-col>
 
             <v-col cols="6">
-                <!-- For Treemap -->
+                <TreeMap></TreeMap>
             </v-col>
         </v-row>
     </v-container>
@@ -29,9 +29,10 @@
 <script>
 import BarGraph from './BarGraph.vue'
 import BubbleChart from './BubbleChart'
+import TreeMap from './TreeMap'
 
 export default {
-    components: { BarGraph, BubbleChart },
+    components: { BarGraph, BubbleChart, TreeMap },
     name: 'Dashboard'
     
 }

@@ -39,5 +39,5 @@ export default {
     .dash
         height: fit-content
         background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1))
-        padding: 8px
+        padding: 32px
 </style>

@@ -1,8 +1,12 @@
 <template>
 
     <v-container>
-        <h1>Tables of Data will go here.</h1>
-        <p>(If I have time.)</p>
+        <div class="header">
+            <h1>Data Tables</h1>
+            <p>The tables below feature the data that has been pre-parsed using Tableu.</p>
+        </div>
+
+        <div></div>
     </v-container>
     
 </template>
@@ -15,5 +19,6 @@ export default {
 </script>
 
 <style lang="sass">
-
+    .header 
+        color: #2D4046
 </style>

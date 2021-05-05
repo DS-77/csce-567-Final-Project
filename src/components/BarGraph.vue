@@ -5,8 +5,8 @@
 <script>
     import * as d3 from "d3";
 
-    const width = 600
-    const height = 500
+    const width = 500
+    const height = 400
     const margin = {top: 80, left: 70, bottom: 70, right: 70}
 
     let Swiss = {name:"Swiss",children: [],total: 0},

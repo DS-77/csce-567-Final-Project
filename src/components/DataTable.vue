@@ -13,8 +13,11 @@
 
 <script>
 export default {
-    name: 'DataTable'
-    
+    name: 'DataTable',
+    data() {},
+    mounted() {
+        
+    }   
 }
 </script>
 

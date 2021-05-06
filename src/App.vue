@@ -16,11 +16,6 @@
 
       <v-spacer></v-spacer>
 
-      <div class="nav-items">
-        <router-link tag="a" to="/">Home</router-link>
-        <router-link tag="a" to="/data">Data Tables</router-link>
-      </div>
-
     </v-app-bar>
 
     <!-- Main App Components -->

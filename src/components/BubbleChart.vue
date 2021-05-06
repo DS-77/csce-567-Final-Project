@@ -12,7 +12,7 @@ const width = 1000
 const margin = {top: 70, left: 70, bottom: 70, right: 70}
 
 // TODO: Add different hex colour value for each country.
-let Swiss = {name:"Swiss",children: [],total: 0},
+let Swiss = {name:"Swiss",children: [],total: 0}, //#9e0203
     Spanish = {name:"Spanish",children: [],total: 0},
     Russian = {name:"Russian",children: [],total: 0},
     Malaysian = {name:"Malaysian",children: [],total: 0},
@@ -123,7 +123,6 @@ export default {
             let simulation = d3.forceSimulation().force("x", d3.forceX(width - margin.left).strength(0.01)).force("y", d3.forceY(height).strength(0.01)).force("collide", d3.forceCollide((d) => { return radiusScale(d.total) + 1 }))
 
             // Add circles
-            
             let circles = svg.selectAll("circle").data(gData).enter().append("circle").attr("r", (d) => { return Math.abs(radiusScale(d.total))}).attr("fill", "#EE0405")
         
             // TODO: Figure out how to add labels to circles.

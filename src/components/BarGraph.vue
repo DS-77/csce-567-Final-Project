@@ -38,7 +38,7 @@
         created() {
             // Fetch data
             Promise.all([
-                d3.csv("pitstop_times.csv")
+                d3.csv("./pitstop_times.csv")
             ]).then((data) => {
                 data[0].forEach(d => {
                     switch(d.Constructor_Nation){

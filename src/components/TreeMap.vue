@@ -41,7 +41,7 @@ export default {
     created() {
         // Fetch data
             Promise.all([
-                d3.csv("/pitstop_amounts.csv")
+                d3.csv("pitstop_amounts.csv")
             ]).then((data) => {
                 data[0].forEach(d => {
                     switch(d.Constructor_Nation){

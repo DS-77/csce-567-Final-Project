@@ -38,7 +38,7 @@ export default {
     created(){
         // Fetch data
             Promise.all([
-                d3.csv("/wins.csv")
+                d3.csv("wins.csv")
             ]).then((data) => {
                 data[0].forEach(d => {
                     switch(d.Constructor_Nation){

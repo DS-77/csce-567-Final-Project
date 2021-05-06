@@ -1,7 +1,7 @@
 <template>
 
     <v-container fluid class="dash">
-        <v-card light flat class="info">
+        <v-card light flat class="info" elevation="5">
             <v-container>
                 <v-card-title>Formula One: Pitstop Data Visualization</v-card-title>
                 <v-card-text class="white--text">The first visualization, the packed bubble chart, indicates the highest ratio of global wins based on 2010 to 2020 data from a compilation of data gathered from Formula 1 racing. Within the data, the construct with the highest number of global wins is categorized by the size of the bubble with the largest bubble indicating the highest number of wins and the smallest bubble indicating the least number of wins. Each bubble is color-coded to correlate with the nationality that each construct represents. Within this data, it indicates that the top three nationalities with the highest ratio from 2010 to 2020 were British, Italian, and German.</v-card-text>

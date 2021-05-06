@@ -9,20 +9,20 @@
     const height = 400
     const margin = {top: 80, left: 70, bottom: 70, right: 70}
 
-    let Swiss = {name:"Swiss",children: [],total: 0},
-    Spanish = {name:"Spanish",children: [],total: 0},
-    Russian = {name:"Russian",children: [],total: 0},
-    Malaysian = {name:"Malaysian",children: [],total: 0},
-    Japanese = {name:"Japanese",children: [],total: 0},
-    Italian = {name:"Italian",children: [],total: 0},
-    Irish = {name:"Irish",children: [],total: 0},
-    Indian = {name:"Indian",children: [],total: 0},
-    German = {name:"German",children: [],total: 0},
-    French = {name:"French",children: [],total: 0},
-    Dutch = {name:"Dutch",children: [],total: 0},
-    British = {name:"British",children: [],total: 0},
-    Austrian = {name:"Austrian",children: [],total: 0},
-    American = {name:"American",children: [],total: 0}
+    let Swiss = {name:"Swiss",children: [],total: 0, colour: "#173354"},
+    Spanish = {name:"Spanish",children: [],total: 0, colour: "#1e4470"},
+    Russian = {name:"Russian",children: [],total: 0, colour: "#26558d"},
+    Malaysian = {name:"Malaysian",children: [],total: 0, colour: "#2e66a9"},
+    Japanese = {name:"Japanese",children: [],total: 0, colour: "#3577c5"},
+    Italian = {name:"Italian",children: [],total: 0, colour: "#3d88e1"},
+    Irish = {name:"Irish",children: [],total: 0, colour: "#4599fe"},
+    Indian = {name:"Indian",children: [],total: 0, colour: "#59a4fe"},
+    German = {name:"German",children: [],total: 0, colour: "#6eaffe"},
+    French = {name:"French",children: [],total: 0, colour: "#83bbfe"},
+    Dutch = {name:"Dutch",children: [],total: 0, colour: "#97c6fe"},
+    British = {name:"British",children: [],total: 0, colour: "#acd1fe"},
+    Austrian = {name:"Austrian",children: [],total: 0, colour: "#c1ddfe"},
+    American = {name:"American",children: [],total: 0, colour: "#d5e8fe"}
 
     const gData = [Swiss, Spanish, Russian, Malaysian, Japanese, Italian, Irish, Indian, German,Dutch, French, British, Austrian, American]
 
@@ -126,7 +126,7 @@
                 this.yScale = d3.scaleBand().range([0, height]).domain(gData.map((s) => { return s.name;})).padding(.1);
 
                 // Adding Bars
-                svg.selectAll(".rect").data(gData).enter().append("rect").attr("class", "rect").attr("width", d => {return this.xScale(d.total); } ).attr("y", d => { return this.yScale(d.name); }).attr("height", this.yScale.bandwidth());
+                svg.selectAll(".rect").data(gData).enter().append("rect").attr("class", "rect").attr("width", d => {return this.xScale(d.total); } ).attr("y", d => { return this.yScale(d.name); }).attr("height", this.yScale.bandwidth()).attr('fill', (d) => {return d.colour});
 
                 // Adding Axis
                 svg.append("g").attr("class", "xAxis").attr("transform", "translate(0," + height + ")").call(d3.axisBottom(this.xScale)).selectAll("text").attr("transform", "translate(0,0)rotate(-45)").style("text-anchor", "end");
@@ -159,6 +159,4 @@
             stroke: #2D4046
         text
             fill: #2D4046
-    .rect 
-        fill: #FFFDFE
 </style>

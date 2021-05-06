@@ -11,21 +11,20 @@ const height = 500
 const width = 1000
 const margin = {top: 70, left: 70, bottom: 70, right: 70}
 
-// TODO: Add different hex colour value for each country.
-let Swiss = {name:"Swiss",children: [],total: 0}, //#9e0203
-    Spanish = {name:"Spanish",children: [],total: 0},
-    Russian = {name:"Russian",children: [],total: 0},
-    Malaysian = {name:"Malaysian",children: [],total: 0},
-    Japanese = {name:"Japanese",children: [],total: 0},
-    Italian = {name:"Italian",children: [],total: 0},
-    Irish = {name:"Irish",children: [],total: 0},
-    Indian = {name:"Indian",children: [],total: 0},
-    German = {name:"German",children: [],total: 0},
-    French = {name:"French",children: [],total: 0},
-    Dutch = {name:"Dutch",children: [],total: 0},
-    British = {name:"British",children: [],total: 0},
-    Austrian = {name:"Austrian",children: [],total: 0},
-    American = {name:"American",children: [],total: 0}
+let Swiss = {name:"Swiss",children: [],total: 0, colour:"#9e0203"},
+    Spanish = {name:"Spanish",children: [],total: 0, colour:"#b90303"},
+    Russian = {name:"Russian",children: [],total: 0, colour:"#d30304"},
+    Malaysian = {name:"Malaysian",children: [],total: 0, colour:"#ee0405"},
+    Japanese = {name:"Japanese",children: [],total: 0, colour:"#ef1f20"},
+    Italian = {name:"Italian",children: [],total: 0, colour:"#f13b3c"},
+    Irish = {name:"Irish",children: [],total: 0, colour:"#f35758"},
+    Indian = {name:"Indian",children: [],total: 0, colour:"#f57374"},
+    German = {name:"German",children: [],total: 0, colour:"#f78f8f"},
+    French = {name:"French",children: [],total: 0, colour:"#f9abab"},
+    Dutch = {name:"Dutch",children: [],total: 0, colour:"#fbc7c7"},
+    British = {name:"British",children: [],total: 0, colour:"#fde3e3"},
+    Austrian = {name:"Austrian",children: [],total: 0, colour:"#ffffff"},
+    American = {name:"American",children: [],total: 0, colour:"#f00607"}
 
     const gData = [Swiss, Spanish, Russian, Malaysian, Japanese, Italian, Irish, Indian, German,Dutch, French, British, Austrian, American];
 
@@ -123,7 +122,7 @@ export default {
             let simulation = d3.forceSimulation().force("x", d3.forceX(width - margin.left).strength(0.01)).force("y", d3.forceY(height).strength(0.01)).force("collide", d3.forceCollide((d) => { return radiusScale(d.total) + 1 }))
 
             // Add circles
-            let circles = svg.selectAll("circle").data(gData).enter().append("circle").attr("r", (d) => { return Math.abs(radiusScale(d.total))}).attr("fill", "#EE0405")
+            let circles = svg.selectAll("circle").data(gData).enter().append("circle").attr("r", (d) => { return Math.abs(radiusScale(d.total))}).attr("fill", (d) => {return d.colour})
         
             // TODO: Figure out how to add labels to circles.
             let labels = circles.append("text").text(d => { return d.name; }).attr("dx", -10).attr("dy", ".35em").text((d) => {return d.name }).attr("fill", "white").attr("font-size", "15px")
